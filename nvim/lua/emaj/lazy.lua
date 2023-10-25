@@ -47,6 +47,14 @@ local plugins = {
     {'L3MON4D3/LuaSnip'},     -- Required
   }
 },
+{
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl", 
+    opts = {},
+    config = function()
+        require("ibl").setup()
+    end,
+},
 }
 
 local opts = {}

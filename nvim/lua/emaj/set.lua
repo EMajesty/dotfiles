@@ -12,8 +12,8 @@ vim.opt.wrap = false
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
+--vim.opt.ignorecase = true
+--vim.opt.smartcase = true
 
 vim.opt.termguicolors = true
 
