@@ -12,6 +12,15 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
+{
+    'shaunsingh/nord.nvim',
+    lazy = false,
+    priority = 1000,
+    opts = {},
+    config = function()
+        vim.cmd[[colorscheme nord]]
+    end,
+},
 --{
 --	'folke/tokyonight.nvim',
 --	lazy = false,
@@ -29,14 +38,14 @@ local plugins = {
 --        vim.cmd[[colorscheme catppuccin]]
 --    end,
 --},
-{
-    'sainnhe/gruvbox-material',
-    name = 'gruvbox-material',
-    priority = 1000,
-    config = function()
-        vim.cmd[[colorscheme gruvbox-material]]
-    end,
-},
+-- {
+--     'sainnhe/gruvbox-material',
+--     name = 'gruvbox-material',
+--     priority = 1000,
+--     config = function()
+--         vim.cmd[[colorscheme gruvbox-material]]
+--     end,
+-- },
 {
 	'nvim-telescope/telescope.nvim', tag = '0.1.3',
 	dependencies = { 'nvim-lua/plenary.nvim' }
@@ -70,6 +79,11 @@ local plugins = {
     config = function()
         require("ibl").setup()
     end,
+},
+{
+    'numToStr/Comment.nvim',
+    opts = {},
+    lazy = false,
 },
 }
 
